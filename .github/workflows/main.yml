@@ -32,4 +32,4 @@ jobs:
       - name: Start server + ngrok
         run: |
           node index.js &
-          ngrok http 3000 --log=stdout
+          ngrok http 3000 --log=stdout | grep -o 'https://[a-z0-9]*\.ngrok\.io'
